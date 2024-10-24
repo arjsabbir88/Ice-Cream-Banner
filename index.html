@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice-crime Web Design</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle">
+        </div>
+        <header>
+            <a href="#"> <img src="logo.jpg" alt=""></a>
+            <ul class="homeColor">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contract</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </header>
+        <div class="contain">
+            <div class="textBox">
+                <h2>Scoop up <span>Happiness</span><br>One <span>Cone</span> at a time</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium neque recusandae quibusdam? Reprehenderit, officiis unde possimus temporibus dolorum, vitae, necessitatibus quidem illum quia sapiente doloribus recusandae ratione nam minima dignissimos!</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgbox">
+                <img  class="ice1" src="ice-img1.png" alt="Ice-crime" >
+            </div>
+        </div>
+        <ul class="thamb">
+            <li><a href="#"><img src="tham1.png" alt="" onclick="changePicture('tham1.png'); changeColor('#9b421f')"></a></li>
+            <li><a href="#"><img src="tham2.png" alt="" onclick="changePicture('tham2.png'); changeColor('#b13f7d')"></a></li>
+            <li><a href="#"><img src="tham3.png" alt="" onclick="changePicture('tham3.png'); changeColor('#7D4631')"></a></li>
+            <li><a href="#"><img src="tham4.png" alt="" onclick="changePicture('tham4.png'); changeColor('#1e8168')"></a></li>
+        </ul2>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png" alt=""></a></li>
+            <li><a href="#"><img src="instagram.png" alt=""></a></li>
+            <li><a href="#"><img src="twitter.png" alt=""></a></li>
+        </ul>
+    </section>
+
+    <script>
+        function changePicture(value){
+            document.querySelector('.ice1').src = value;
+        }
+        function changeColor(colorValue){
+            const color=document.querySelector('.circle');
+            color.style.background = colorValue;
+
+            const spans = document.querySelectorAll('span');
+            spans.forEach(function(span) {
+                span.style.color = colorValue;
+            });
+
+            const navLinks = document.querySelectorAll('.homeColor li a');
+            navLinks.forEach(function(link) {
+                link.style.backgroundColor = colorValue;
+            });
+            const learnMore = document.querySelector('.textBox a[href="#"]');
+            learnMore.style.backgroundColor = colorValue;
+            }
+    </script>
+
+</body>
+</html>
